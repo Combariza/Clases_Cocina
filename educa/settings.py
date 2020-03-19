@@ -38,6 +38,7 @@ CACHES = {
 # Application definition
 
 INSTALLED_APPS = [
+    'students.apps.StudentsConfig',
     'memcache_status',
     'courses.apps.CoursesConfig',
     'django.contrib.admin',
