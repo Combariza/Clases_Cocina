@@ -24,8 +24,11 @@ SECRET_KEY = '9x8-4=l7$bo^ym6dp$hdrl5sdkt=voqavk$_^@pfy%_8%gvs#$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+from django.urls import reverse_lazy
+LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
 ALLOWED_HOSTS = []
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CACHES = {
     'default': {
@@ -38,6 +41,7 @@ CACHES = {
 # Application definition
 
 INSTALLED_APPS = [
+    'embed_video',
     'students.apps.StudentsConfig',
     'memcache_status',
     'courses.apps.CoursesConfig',
