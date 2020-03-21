@@ -24,6 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('students/', include('students.urls')),
     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
+    path('api/', include('courses.api.urls', namespace='api')),
     path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('admin/', admin.site.urls),
     path('course/', include('courses.urls')),
